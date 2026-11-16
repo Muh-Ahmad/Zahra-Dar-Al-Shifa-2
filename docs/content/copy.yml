@@ -1,0 +1,301 @@
+# docs/content/copy.yml — EVERY customer-facing string. ur = Urdu (default, RTL) · en = English.
+# Pipeline: node scripts/build-locales.mjs → locales/ur.json + locales/en.default.json (identical key paths).
+# A leaf is either {ur, en} or one string used for both languages.
+#
+# Facts are never typed here. Use placeholders, filled in Liquid from the generated `facts.*` keys:
+#   {{ doctor }} {{ role }} {{ experience }} {{ experience_years }} {{ hours }} {{ days }} {{ address }}
+#   {{ landmark }} {{ phone }} {{ emergency }} {{ helpline_name }} {{ helpline }} {{ registration }}
+#   {{ specialty }} {{ product }} {{ code }} {{ year }} {{ qualification }} {{ institute }} {{ qualification_year }} {{ council }}
+#   Shopify base-template strings also use {{ date }} {{ author }} {{ terms }} {{ count }} {{ expires_on }}.
+#
+# Urdu rules: punctuation ۔ ، ؟ (never . , ? inside Urdu). Latin digits. Address the reader as آپ.
+# Glossary (use consistently): مشورہ consultation · نسخہ prescription/formula · علاج treatment ·
+#   ادویات medicines · جڑی بوٹیاں herbs · رازداری confidentiality · ہربل فیزیشن herbal physician ·
+#   طبیب Tabeeb (the NCT-registered title) · حکیم Hakeem · طبِ یونانی Unani medicine
+# Markers: # [PROOF-READ] Major Sahab reads the Urdu before launch · # [CONFIRM] depends on facts.yml
+
+meta:
+  home_title:
+    ur: "زہرا دار الشفاء — ہربل کلینک، کینال گارڈنز لاہور"   # [PROOF-READ]
+    en: "Zahra Dar Al-Shifa — Herbal Clinic in Canal Gardens, Lahore"
+  home_description:
+    ur: "تجربہ کار حکیم سے جوڑوں کے درد، معدہ و جگر اور دیگر امراض کے لیے قدرتی جڑی بوٹیوں سے علاج۔ پہلا مشورہ مفت — آج ہی واٹس ایپ کریں۔"   # [PROOF-READ]
+    en: "Herbal treatment for joint pain, stomach & liver and more from an experienced hakeem in Canal Gardens, Lahore. First consultation free — WhatsApp us today."
+
+a11y:
+  skip_to_content: { ur: "مرکزی مواد پر جائیں", en: "Skip to main content" }
+  language: { ur: "زبان", en: "Language" }
+  logo_alt: { ur: "زہرا دار الشفاء کا لوگو", en: "Zahra Dar Al-Shifa logo" }
+  whatsapp_label: { ur: "واٹس ایپ پر رابطہ کریں", en: "Contact us on WhatsApp" }
+  call_label: { ur: "کلینک کو کال کریں", en: "Call the clinic" }
+  directions_label: { ur: "گوگل میپس پر راستہ دیکھیں", en: "Get directions on Google Maps" }
+  sticky_label: { ur: "فوری رابطہ", en: "Quick contact" }
+  map_title: { ur: "زہرا دار الشفاء کا نقشہ", en: "Map to Zahra Dar Al-Shifa" }
+  opens_new: { ur: "(نئی ونڈو میں کھلے گا)", en: "(opens in a new window)" }
+  main_nav: { ur: "مرکزی فہرست", en: "Main navigation" }   # [PROOF-READ]
+  footer_nav: { ur: "ویب سائٹ کے لنکس", en: "Site links" }   # [PROOF-READ]
+  policies_nav: { ur: "پالیسیاں", en: "Policies" }
+
+lang_switch:
+  to_en: "English"
+  to_ur: "اردو"
+
+nav:
+  about: { ur: "ہمارے بارے میں", en: "About" }
+  medicines: { ur: "ادویات اور علاج", en: "Medicines & treatments" }
+  contact: { ur: "رابطہ", en: "Contact" }
+
+hero:
+  eyebrow: { ur: "زہرا دار الشفاء · لاہور", en: "Zahra Dar Al-Shifa · Lahore" }
+  headline_a:
+    ur: "جڑی بوٹیوں سے قدرتی علاج — ہر مریض کے لیے الگ نسخہ"   # [PROOF-READ] default headline
+    en: "Natural herbal care — a personal prescription for every patient"
+  headline_b:
+    ur: "قدرتی، دیسی اور آزمودہ جڑی بوٹیوں سے علاج"   # [PROOF-READ] A/B variant
+    en: "Treatment with natural, traditional, time-tested herbs"
+  sub:
+    ur: "تجربہ کار ہربل فیزیشن {{ doctor }} سے مشورہ کریں — جوڑوں کے درد، معدہ و جگر اور دیگر امراض کے لیے مکمل رہنمائی، پوری رازداری کے ساتھ۔"   # [PROOF-READ]
+    en: "Consult experienced herbal physician {{ doctor }} — complete guidance for joint pain, stomach & liver and more, in full confidence."
+  cta_whatsapp: { ur: "آج ہی واٹس ایپ کریں — پہلا مشورہ مفت", en: "WhatsApp us today — first consultation free" }
+  cta_call: { ur: "کال کریں", en: "Call" }
+  trust_line:
+    ur: "رجسٹرڈ طبیب · {{ experience }} · {{ hours }}"   # [PROOF-READ] "registered Tabeeb": the NCT registers the person; the clinic's own PHC number is pending
+    en: "NCT-registered hakeem · {{ experience }} · {{ hours }}"
+  image_alt:
+    ur: "{{ doctor }} اپنے کلینک میں"   # [CONFIRM] only with the real photo
+    en: "{{ doctor }} at his clinic in Lahore"
+  placeholder_alt: { ur: "جڑی بوٹیاں اور ہربل ادویات", en: "Herbs and herbal medicines" }
+
+about:
+  eyebrow: { ur: "ہمارے بارے میں", en: "About us" }
+  heading: { ur: "تجربے اور اعتماد کی روایت", en: "A tradition of experience and trust" }   # [PROOF-READ]
+  body_1:
+    ur: "{{ doctor }} ایک تجربہ کار ہربل فیزیشن ہیں جو {{ experience_years }} سال سے زائد عرصے سے قدرتی، دیسی اور آزمودہ جڑی بوٹیوں سے مریضوں کا علاج کر رہے ہیں۔ ان کا اصول سادہ ہے: پہلے مریض کی پوری بات سنی جائے، پھر اسی کے مطابق نسخہ تیار کیا جائے۔"   # [PROOF-READ]
+    en: "{{ doctor }} is an experienced herbal physician who has treated patients with natural, traditional and time-tested herbs for more than {{ experience_years }} years. His principle is simple: listen to the patient fully first, then prepare the prescription to match."
+  body_2:
+    ur: "اب ہمارا کلینک کینال گارڈنز، لاہور میں مریضوں کے لیے کھلا ہے۔"   # [PROOF-READ]
+    en: "Our clinic is now open for patients in Canal Gardens, Lahore."
+  body_3:
+    ur: "انہوں نے {{ institute }} سے {{ qualification }} کی تعلیم مکمل کی، اور وہ {{ council }} کے رجسٹرڈ طبیب ہیں۔"   # [PROOF-READ]
+    en: "He completed {{ qualification }} at {{ institute }} and is a registered Tabeeb with the {{ council }}."
+  credentials_heading: { ur: "اسناد اور تجربہ", en: "Qualifications & experience" }
+  # Labels and values of the credentials list (homepage-blueprint §2). A row renders only when its fact is not empty.
+  cred_role: { ur: "شعبہ", en: "Practice" }   # [PROOF-READ]
+  cred_qualification: { ur: "تعلیم", en: "Qualification" }   # [PROOF-READ]
+  cred_experience: { ur: "تجربہ", en: "Experience" }   # [PROOF-READ]
+  cred_rank: { ur: "عسکری خدمات", en: "Military service" }   # [PROOF-READ]
+  cred_phd: { ur: "پی ایچ ڈی", en: "PhD" }   # only when facts.phd is not empty (after verification)
+  qualification_value:
+    ur: "{{ qualification }} — {{ institute }} ({{ qualification_year }})"   # [PROOF-READ]
+    en: "{{ qualification }} — {{ institute }} ({{ qualification_year }})"
+  registration_value:
+    ur: "{{ council }} · رجسٹریشن نمبر {{ registration }}"   # [PROOF-READ]
+    en: "{{ council }} · Reg. No. {{ registration }}"
+  certificate_link: { ur: "رجسٹریشن سرٹیفکیٹ دیکھیں", en: "View the registration certificate" }   # only when facts.certificate_public is "yes" [PROOF-READ]
+  portrait_alt: { ur: "{{ doctor }}", en: "{{ doctor }}" }
+  quote: { ur: "", en: "" }   # [PENDING] only Major Sahab's own words (facts.yml practitioner.quote_*)
+  pillar_1_title: { ur: "ذاتی تشخیص اور نسخہ", en: "Personal assessment & prescription" }
+  pillar_1_body:
+    ur: "ہر مریض کی پوری بات سن کر الگ نسخہ اور پرہیز کا منصوبہ۔"   # [PROOF-READ]
+    en: "We listen fully, then prepare an individual prescription and diet plan."
+  pillar_2_title: { ur: "خالص جڑی بوٹیاں", en: "Pure herbs" }
+  pillar_2_body:
+    ur: "قدرتی، دیسی اور آزمودہ جڑی بوٹیوں سے تیار ادویات، جو نسلوں سے استعمال ہو رہی ہیں۔"   # [PROOF-READ]
+    en: "Medicines made from natural, traditional, time-tested herbs used for generations."
+  pillar_3_title: { ur: "مکمل رازداری", en: "Complete confidentiality" }
+  pillar_3_body:
+    ur: "مردانہ و زنانہ امراض سمیت ہر مسئلے پر بات مکمل رازداری سے ہوتی ہے۔"   # [PROOF-READ]
+    en: "Every concern, including men's and women's health, is discussed in full privacy."
+  spiritual_title: { ur: "روحانی رہنمائی", en: "Spiritual guidance" }
+  spiritual_body:
+    ur: "ہربل علاج کے ساتھ، مریض کی خواہش پر قرآنی آیات اور مسنون دعاؤں کے ذریعے روحانی رہنمائی بھی فراہم کی جاتی ہے۔"   # [PROOF-READ]
+    en: "Alongside herbal treatment, spiritual guidance through Quranic verses and Masnoon supplications is offered to patients who wish for it."
+  registration_label: { ur: "رجسٹریشن", en: "Registration" }
+  testimonials_heading: { ur: "مریضوں کے تجربات", en: "Patient experiences" }
+  testimonials_note: { ur: "ہر مریض کا تجربہ مختلف ہو سکتا ہے۔", en: "Individual experiences; results vary." }
+
+treatments:
+  eyebrow: { ur: "ادویات اور علاج", en: "Medicines & treatments" }
+  heading: { ur: "ہمارے شعبہ جات", en: "Our specialties" }
+  intro:
+    ur: "ہر علاج ذاتی مشورے سے شروع ہوتا ہے۔ اپنا مسئلہ واٹس ایپ پر بتائیں — پہلا مشورہ مفت ہے۔"   # [PROOF-READ]
+    en: "Every treatment starts with a personal consultation. Tell us your concern on WhatsApp — the first consultation is free."
+  cta: { ur: "مشورہ کریں", en: "Consult" }
+  items:
+    joints:
+      ur: "گھٹنوں، کندھوں اور دیگر جوڑوں کے درد اور اکڑن کے لیے جڑی بوٹیوں پر مبنی علاج۔"   # [PROOF-READ]
+      en: "Herbal care for pain and stiffness in knees, shoulders and other joints."
+    stomach_liver:
+      ur: "تیزابیت، بدہضمی اور جگر کی صحت کے لیے قدرتی نسخے۔"   # [PROOF-READ]
+      en: "Natural remedies for acidity, indigestion and liver health."
+    spine:
+      ur: "گردن اور کمر کے مہروں کے درد میں آرام کے لیے مشورہ اور علاج۔"   # [PROOF-READ]
+      en: "Advice and care for neck and back (spine) pain."
+    paralysis:
+      ur: "فالج اور لقوہ کے بعد بحالی میں معاون ہربل علاج۔"   # [PROOF-READ]
+      en: "Supportive herbal care during recovery from paralysis and facial palsy."
+    hepatitis:
+      ur: "جگر کی صحت کے لیے معاون علاج، آپ کے ڈاکٹر کے علاج کے ساتھ۔"   # [PROOF-READ]
+      en: "Supportive liver care alongside your doctor's treatment."
+    diabetes:
+      ur: "شوگر کے مریضوں کے لیے معاون ہربل رہنمائی اور پرہیز۔"   # [PROOF-READ]
+      en: "Supportive herbal guidance and diet advice for people with diabetes."
+    depression:
+      ur: "ذہنی دباؤ اور اداسی میں روحانی اور ہربل معاونت۔"   # [PROOF-READ]
+      en: "Spiritual and herbal support for stress and low mood."
+  private_title: { ur: "رازدارانہ مشورہ", en: "Private consultation" }
+  private_body:
+    ur: "مردانہ و زنانہ امراض اور بے اولادی — مکمل رازداری کے ساتھ ذاتی مشورہ۔"   # [PROOF-READ]
+    en: "Men's health, women's health and childlessness — a personal consultation in complete confidence."
+  private_cta: { ur: "رازدارانہ مشورہ کریں", en: "Ask privately" }
+  notices:
+    paralysis:
+      ur: "اگر اچانک چہرہ ٹیڑھا ہو جائے، بازو یا ٹانگ کمزور ہو جائے یا بولنے میں دشواری ہو تو یہ ہنگامی حالت ہے — فوراً {{ emergency }} پر کال کریں یا قریبی ہسپتال جائیں۔"   # [PROOF-READ]
+      en: "Sudden face drooping, arm or leg weakness or difficulty speaking is an emergency — call {{ emergency }} or go to the nearest hospital immediately."
+    diabetes:
+      ur: "اپنی انسولین یا شوگر کی دوائیں ڈاکٹر کے مشورے کے بغیر ہرگز بند نہ کریں۔"   # [PROOF-READ]
+      en: "Never stop insulin or diabetes medicines without your doctor's advice."
+    hepatitis:
+      ur: "ہیپاٹائٹس بی اور سی کی تشخیص اور علاج کے لیے لیبارٹری ٹیسٹ اور ماہر ڈاکٹر کا علاج ضروری ہے؛ ہمارا ہربل علاج اس کے ساتھ معاون ہے۔"   # [PROOF-READ]
+      en: "Hepatitis B and C need lab tests and treatment by a specialist doctor; our herbal care is supportive alongside it."
+    depression:
+      ur: "اگر آپ شدید پریشانی میں ہیں یا خود کو نقصان پہنچانے کے خیالات آ رہے ہیں تو فوراً {{ emergency }} پر کال کریں یا قریبی ہسپتال جائیں، اور اپنے کسی قریبی شخص کو بتائیں۔"   # [PROOF-READ]
+      en: "If you are in severe distress or having thoughts of harming yourself, call {{ emergency }} or go to the nearest hospital right away, and tell someone close to you."
+    childlessness:
+      ur: "بہتر رہنمائی کے لیے میاں بیوی دونوں کے میڈیکل ٹیسٹ مفید ہوتے ہیں۔"   # [PROOF-READ]
+      en: "Medical tests for both partners help us guide you better."
+
+medicines:
+  heading: { ur: "ہماری ادویات", en: "Our medicines" }
+  note:
+    ur: "ہر دوا مشورے کے بعد تجویز کی جاتی ہے تاکہ آپ کو درست نسخہ ملے۔"   # [PROOF-READ]
+    en: "Each medicine is recommended after a consultation, so you get the right prescription."
+  empty:
+    ur: "ادویات کی تفصیل جلد دستیاب ہوگی — مشورے کے لیے واٹس ایپ کریں۔"   # [PROOF-READ]
+    en: "Medicine details are coming soon — WhatsApp us for a consultation."
+
+product_ui:
+  order_whatsapp: { ur: "واٹس ایپ پر منگوائیں", en: "Order on WhatsApp" }
+  add_to_cart: { ur: "کارٹ میں شامل کریں", en: "Add to cart" }
+  price_on_request: { ur: "قیمت کے لیے واٹس ایپ کریں", en: "WhatsApp us for the price" }
+  external_use: { ur: "صرف بیرونی استعمال کے لیے", en: "For external use only" }
+  consult_only: { ur: "مشورے کے بعد تجویز کی جاتی ہے", en: "Recommended after a consultation" }
+  sold_out: { ur: "فی الحال دستیاب نہیں", en: "Currently unavailable" }
+  cod_note: { ur: "ادائیگی: کیش آن ڈیلیوری", en: "Payment: cash on delivery" }
+  size_label: { ur: "مقدار", en: "Size" }
+  price_label: { ur: "قیمت", en: "Price" }
+
+# Source text for Shopify product descriptions (pasted in admin; English via Translate & Adapt).
+products:
+  herbal_joint_oil_use:
+    ur: "گھٹنوں اور جوڑوں کے درد میں آرام کے لیے مالش کا ہربل روغن۔"   # [PROOF-READ]
+    en: "A herbal massage oil for relief in knee and joint pain."
+  stomach_liver_herbal_use:
+    ur: "معدے اور جگر کی صحت کے لیے جڑی بوٹیوں پر مبنی نسخہ۔"   # [PROOF-READ]
+    en: "A herbal formula for stomach and liver health."
+  joint_herbal_tablets_use:
+    ur: "جوڑوں کی صحت کے لیے جڑی بوٹیوں سے تیار گولیاں۔"   # [PROOF-READ]
+    en: "Herbal tablets for joint health."
+  external_use_warning:
+    ur: "صرف بیرونی استعمال کے لیے۔ آنکھوں اور زخم پر نہ لگائیں۔ پہلی بار استعمال سے پہلے جلد کے چھوٹے حصے پر آزما لیں۔ حاملہ خواتین اور بچوں کے لیے استعمال سے پہلے مشورہ کریں۔"   # [PROOF-READ]
+    en: "For external use only. Do not apply to the eyes or broken skin. Patch-test a small area before first use. Pregnant women and children: consult before use."
+
+contact:
+  eyebrow: { ur: "رابطہ", en: "Contact" }
+  heading: { ur: "کلینک تشریف لائیں", en: "Visit the clinic" }
+  address_label: { ur: "پتہ", en: "Address" }
+  hours_label: { ur: "اوقاتِ کار", en: "Clinic hours" }
+  phone_label: { ur: "فون / واٹس ایپ", en: "Phone / WhatsApp" }
+  directions: { ur: "گوگل میپس پر راستہ دیکھیں", en: "Get directions" }
+  show_map: { ur: "نقشہ دیکھیں", en: "Show map" }
+  copy_address: { ur: "پتہ کاپی کریں", en: "Copy address" }
+  copied: { ur: "پتہ کاپی ہو گیا", en: "Address copied" }
+  after_hours:
+    ur: "کلینک کے اوقات کے بعد بھی واٹس ایپ پر آپ کے پیغام کا جواب دیا جاتا ہے۔"   # confirmed 2026-11-14: WhatsApp is answered after 8 pm too [PROOF-READ]
+    en: "We answer WhatsApp messages even after clinic hours."
+
+sticky:
+  whatsapp: { ur: "واٹس ایپ", en: "WhatsApp" }
+  call: { ur: "کال کریں", en: "Call" }
+
+footer:
+  tagline: { ur: "قدرتی علاج، پُرسکون زندگی", en: "Natural care, peaceful life" }
+  disclaimer_title: { ur: "اہم اطلاع", en: "Important" }
+  disclaimer:
+    ur: "یہ ویب سائٹ صرف عمومی معلومات کے لیے ہے۔ ہماری ہربل ادویات اور مشورہ کسی مستند ڈاکٹر کے علاج کا متبادل نہیں۔ اپنی جاری ادویات ڈاکٹر کے مشورے کے بغیر بند نہ کریں۔ ہنگامی صورت میں فوراً {{ emergency }} پر کال کریں یا قریبی ہسپتال جائیں۔ نتائج ہر مریض میں مختلف ہو سکتے ہیں۔"   # [PROOF-READ]
+    en: "This website is for general information only. Our herbal medicines and advice do not replace treatment by a qualified doctor. Do not stop any prescribed medicine without your doctor's advice. In an emergency, call {{ emergency }} or go to the nearest hospital. Results vary from person to person."
+  emergency: { ur: "ہنگامی صورت میں: {{ emergency }}", en: "Emergency: {{ emergency }}" }
+  registration: { ur: "رجسٹرڈ طبیب، {{ council }} · رجسٹریشن نمبر {{ registration }}", en: "Registered Tabeeb, {{ council }} · Reg. No. {{ registration }}" }   # [PROOF-READ]
+  rights:
+    ur: "© {{ year }} زہرا دار الشفاء۔ جملہ حقوق محفوظ ہیں۔"
+    en: "© {{ year }} Zahra Dar Al-Shifa. All rights reserved."
+  privacy: { ur: "پرائیویسی پالیسی", en: "Privacy policy" }
+  refund: { ur: "واپسی کی پالیسی", en: "Refund policy" }
+  shipping: { ur: "ڈیلیوری پالیسی", en: "Shipping policy" }
+  terms: { ur: "شرائط و ضوابط", en: "Terms of service" }
+
+# Prefilled WhatsApp messages. Gender-neutral Urdu (درکار ہے / منگوانا ہے). Ref line appended by JS.
+whatsapp:
+  home:
+    ur: "السلام علیکم! مجھے زہرا دار الشفاء سے مفت مشورہ درکار ہے۔"   # [PROOF-READ]
+    en: "Assalam-o-Alaikum! I'd like a free consultation at Zahra Dar Al-Shifa."
+  specialty:
+    ur: "السلام علیکم! مجھے {{ specialty }} کے بارے میں مشورہ درکار ہے۔"   # [PROOF-READ]
+    en: "Assalam-o-Alaikum! I'd like advice about: {{ specialty }}."
+  private:
+    ur: "السلام علیکم! مجھے رازدارانہ مشورہ درکار ہے۔"   # [PROOF-READ]
+    en: "Assalam-o-Alaikum! I'd like a private consultation."
+  product:
+    ur: "السلام علیکم! مجھے {{ product }} منگوانا ہے۔"   # [PROOF-READ]
+    en: "Assalam-o-Alaikum! I'd like to order {{ product }}."
+  visit:
+    ur: "السلام علیکم! کلینک آنے کے لیے وقت معلوم کرنا ہے۔"   # [PROOF-READ]
+    en: "Assalam-o-Alaikum! I'd like to know a good time to visit the clinic."
+  ref: { ur: "کوڈ: {{ code }}", en: "Ref: {{ code }}" }
+
+# Strings used by Shopify's base templates (from the Skeleton theme). Keep these key paths: the templates call them.
+"404":
+  title: "404"
+  not_found: { ur: "یہ صفحہ نہیں ملا۔", en: "Page not found." }
+  back_to_shopping: { ur: "ہوم پیج پر واپس جائیں", en: "Back to the home page" }
+blog:
+  article_comments: { ur: "تبصرے", en: "Comments" }
+  article_metadata_html: { ur: "{{ date }} · {{ author }}", en: "{{ date }} by {{ author }}" }
+  comment_form_body: { ur: "تبصرہ", en: "Comment" }
+  comment_form_email: { ur: "ای میل", en: "Email" }
+  comment_form_name: { ur: "نام", en: "Name" }
+  comment_form_submit: { ur: "بھیجیں", en: "Post" }
+  comment_form_title: { ur: "تبصرہ لکھیں", en: "Add a comment" }
+cart:
+  checkout: { ur: "آرڈر کی تصدیق کریں", en: "Checkout" }   # [PROOF-READ]
+  title: { ur: "آپ کی کارٹ", en: "Your cart" }
+  update: { ur: "اپ ڈیٹ کریں", en: "Update" }
+  remove: { ur: "ہٹائیں", en: "Remove" }
+customers:
+  login:
+    email: { ur: "ای میل", en: "Email" }
+    password: { ur: "پاس ورڈ", en: "Password" }
+    submit: { ur: "لاگ اِن کریں", en: "Sign in" }
+    title: { ur: "لاگ اِن", en: "Login" }
+collections:
+  title: { ur: "ادویات کے مجموعے", en: "Collections" }   # [PROOF-READ]
+gift_card:
+  add_to_apple_wallet: { ur: "ایپل والٹ میں شامل کریں", en: "Add to Apple Wallet" }
+  card: { ur: "گفٹ کارڈ", en: "Gift card" }
+  expired: { ur: "اس گفٹ کارڈ کی مدت ختم ہو چکی ہے۔", en: "This gift card has expired" }
+  expires_on: { ur: "مدت ختم ہونے کی تاریخ: {{ expires_on }}", en: "Expires on {{ expires_on }}" }
+  use_at_checkout: { ur: "یہ گفٹ کارڈ آرڈر کرتے وقت استعمال کریں۔", en: "Use this gift card at checkout" }
+password:
+  title: { ur: "ہماری ویب سائٹ جلد آ رہی ہے", en: "Our website is coming soon" }   # [PROOF-READ]
+  password: { ur: "پاس ورڈ", en: "Password" }
+  enter: { ur: "داخل ہوں", en: "Enter" }
+search:
+  title: { ur: "تلاش", en: "Search" }
+  placeholder: { ur: "ادویات یا صفحات تلاش کریں", en: "Search medicines or pages" }
+  submit: { ur: "تلاش کریں", en: "Search" }
+  no_results_html: { ur: "{{ terms }} کے لیے کوئی نتیجہ نہیں ملا۔", en: "No results found for {{ terms }}" }
+  results_for_html: { ur: "{{ terms }} کے لیے {{ count }} نتائج ملے۔", en: "{{ count }} results found for {{ terms }}" }
+
+dev:
+  pending: "Pending: details from Major Sahab"
+  styleguide_title: "ZDS style guide (internal, not indexed)"

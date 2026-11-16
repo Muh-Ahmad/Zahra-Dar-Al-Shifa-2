@@ -1,0 +1,8 @@
+# Never uploaded to Shopify. The CLI only reads the theme folders, but these lines make it explicit.
+docs/*
+scripts/*
+src/*
+qa/*
+integrations/*
+vendor/*
+node_modules/*

@@ -1,0 +1,36 @@
+{
+  "name": "zahra-dar-al-shifa-theme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Zahra Dar Al-Shifa: bilingual (Urdu RTL + English) Shopify theme and its QA tooling",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "locales": "node scripts/build-locales.mjs",
+    "dev": "shopify theme dev --store \"$SHOPIFY_FLAG_STORE\" --password \"$SHOPIFY_CLI_THEME_TOKEN\" --store-password \"$STORE_PASSWORD\"",
+    "check": "shopify theme check --fail-level error",
+    "qa:static": "node scripts/qa-static.mjs",
+    "qa:launch": "node scripts/qa-static.mjs --launch",
+    "qa:launch:v0": "node scripts/qa-static.mjs --launch --scope docs/tech/v0-scope.yml",
+    "qa:proofread": "node scripts/proofread-sheet.mjs --scope docs/tech/v0-scope.yml",
+    "push:review": "node scripts/push-review.mjs",
+    "qa:shots": "node scripts/shots.mjs",
+    "qa:lh": "node scripts/lighthouse.mjs",
+    "qa:review": "node scripts/review-page.mjs",
+    "images": "node scripts/images.mjs",
+    "logo:cutout": "node scripts/logo-cutout.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/noto-nastaliq-urdu": "5.3.0",
+    "@fontsource-variable/playfair-display": "5.3.0",
+    "chrome-launcher": "1.2.2",
+    "lighthouse": "13.6.0",
+    "lucide-static": "1.69.0",
+    "playwright-core": "1.64.1",
+    "sharp": "0.35.5",
+    "simple-icons": "16.36.0",
+    "yaml": "2.9.1"
+  }
+}

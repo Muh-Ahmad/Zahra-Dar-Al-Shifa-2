@@ -1,0 +1,196 @@
+# docs/brand/facts.yml — SINGLE SOURCE OF TRUTH for every business fact.
+# Every other file points here. Change a fact here first, then run: node scripts/build-locales.mjs
+#
+# Markers:
+#   "[PENDING] …" as a VALUE  → unknown. Exported as "" so the site renders nothing.
+#   "[CONFIRM] …" as a VALUE  → a decision Major Sahab must make. Exported as "" (hidden).
+#   # [CONFIRM] as a COMMENT  → value is usable now but must be confirmed before launch.
+#   # [VERIFY]                → external fact to re-check before launch.
+#   # [PROOF-READ]            → Urdu wording for Major Sahab to read.
+version: 1
+updated: "2026-11-14"   # v3: documents from Major Sahab
+
+brand:
+  name_ur: "زہرا دار الشفاء"
+  name_en: "Zahra Dar Al-Shifa"
+  legal_name: "[PENDING] exact registered business name for policies and invoices"
+  signboard_text: "[CONFIRM] exact text on the clinic signboard (Google Business Profile name must match it)"
+
+practitioner:
+  # Sources (checked 2026-11-14): NCT diploma (2013), NCT licence to practise (2022, renewed 2026), a framed PhD copy, and Ahmad.
+  # Private data on those documents (CNIC, home address, father's name) is NEVER copied into this kit, the site or ads.
+  internal_name: "Major Sahab"   # what the team calls him in chats and approvals. Never shown on the site.
+  display_ur: "میجر (ر) حکیم سید ناصر عباس"   # title «حکیم» confirmed by Major Sahab 2026-11-14 (not «ڈاکٹر» while the PhD is unverified) [PROOF-READ]
+  display_en: "Maj. (R) Hakeem Syed Nasir Abbas"
+  title_dr_allowed: false   # true only after the PhD is verified (phd_status); then display_* may use «ڈاکٹر» / "Dr."
+  credential_line_ur: "ریٹائرڈ میجر · رجسٹرڈ طبیب · فاضل الطب والجراحت"   # ads and print [PROOF-READ]. Replaces the 2026-11-05 line that named a PhD.
+  credential_line_en: "Retired Major · NCT-registered Tabeeb · Fazil-ut-Tibb-wal-Jarahat"
+  role_ur: "ہربل فیزیشن · رجسٹرڈ طبیب (طبِ یونانی)"   # [PROOF-READ]
+  role_en: "Herbal physician · Registered Tabeeb (Unani medicine)"
+  experience_years: "12"   # consistent with the documents: FTJ exam 2012, diploma issued 27 Feb 2013
+  experience_ur: "12 سال سے زائد تجربہ"
+  experience_en: "12+ years' experience"
+  rank_ur: "ریٹائرڈ میجر"            # confirmed 2026-11-14: "retired" only, no service branch or corps
+  rank_en: "Major (Retired)"
+  # Qualification (NCT diploma, Sr. No. 18179, issued 27 Feb 2013)
+  qualification_ur: "فاضل الطب والجراحت (چار سالہ نصاب)"   # [PROOF-READ]
+  qualification_en: "Fazil-ut-Tibb-wal-Jarahat (FTJ), a four-year course"
+  institute_ur: "جناح یونانی میڈیکل کالج، شیخوپورہ"
+  institute_en: "Jinnah Unani Medical College, Sheikhupura"
+  qualification_year: "2012"   # examination year printed on the diploma
+  # Registration (NCT licence to practise). Section 24(1), Unani, Ayurvedic and Homoeopathic Practitioners Act 1965:
+  # registered as a Tabib, authorised to practise Unani and Ayurvedic medicine.
+  council_ur: "نیشنل کونسل فار طب، حکومتِ پاکستان"   # [PROOF-READ]
+  council_en: "National Council for Tibb, Government of Pakistan"
+  council_reg_no: "QH-45342-A"   # same number on the 2022 licence and the 2026 renewal
+  council_reg_since: "2022"
+  council_reg_valid_until: "2030-05-18"   # renewal is due before this date (90-day grace period). Remind Major Sahab in Feb 2030.
+  certificate_public: false   # Major Sahab's decision 2026-11-14: no certificate photo on the website (the number is shown as text)
+  # PhD: NOT shown anywhere until verified. The framed copy reads "The University of Hong Kong · Doctor of Philosophy ·
+  # 1 December 1998" with no subject. Its Chinese text has errors a genuine certificate would not have, so it needs
+  # independent verification first: HEC Pakistan degree equivalence, or a confirmation letter from HKU's Registry.
+  phd_status: "unverified"
+  phd_ur: "[CONFIRM] PhD line in Urdu, only after verification"
+  phd_en: "[CONFIRM] PhD subject, university and year, only after verification"
+  practice_since: "[PENDING] year the practice first opened"
+  history_internal: "Practice paused during COVID-19 and was re-established in Lahore in 2026. Internal context only. Not used in public copy."
+  quote_ur: "[PENDING] one sentence in Major Sahab's own words (never written by us)"
+  quote_en: "[PENDING] English translation of the same quote"
+  services: ["herbal medicine (Unani / Tibb)", "spiritual and Quranic guidance (on the patient's request)", "complete confidentiality"]
+
+clinic:
+  status: "open"   # open and taking appointments (Nov 2026)
+  # The clinic PREMISES need their own Punjab Healthcare Commission (PHC) registration. The NCT number above registers the person.
+  registration_authority: "[PENDING] Punjab Healthcare Commission (PHC) registration of the clinic premises (ask Major Sahab)"
+  registration_number: "[PENDING] PHC registration number of the clinic premises"
+  registration_note: "Resolved 2026-11-14: QH-45342-A is Major Sahab's NCT registration (printed on both NCT licences). QH-54342-A on old banners was a typo. Never call it a clinic registration."
+  address:
+    line1_en: "3/1 B-Commercial, Main Boulevard"
+    area_en: "Canal Gardens"   # confirmed 2026-11-14; Google Maps, the signboard and Google Business Profile must use the same spelling
+    city_en: "Lahore"
+    region_en: "Punjab"
+    country_code: "PK"
+    postal_code: "[PENDING] postal code"
+    full_en: "3/1 B-Commercial, Main Boulevard, Canal Gardens, Lahore"
+    landmark_en: "near Kabano Restaurant"
+    full_ur: "3/1 بی کمرشل، مین بلیوارڈ، کینال گارڈنز، لاہور"   # [PROOF-READ]
+    landmark_ur: "نزد کابانو ریسٹورنٹ"   # [PROOF-READ] Urdu spelling of "Kabano"
+    geo_lat: "[PENDING] latitude of the Google Maps pin"
+    geo_lng: "[PENDING] longitude of the Google Maps pin"
+    maps_url: "[PENDING] Google Maps share link of the clinic pin"
+    maps_embed_src: "[PENDING] src value from Google Maps > Share > Embed a map"
+
+hours:
+  opens: "14:00"
+  closes: "20:00"
+  timezone: "Asia/Karachi"
+  display_ur: "دوپہر 2 بجے سے رات 8 بجے تک"
+  display_en: "2:00 pm – 8:00 pm"
+  days_schema: "[PENDING] open days for schema, e.g. Mo-Sa"
+  days_ur: "[PENDING] open days in Urdu, e.g. پیر تا ہفتہ"
+  days_en: "[PENDING] open days, e.g. Monday to Saturday"
+
+contact:
+  phone_display: "0321-6393999"
+  phone_e164: "+923216393999"
+  whatsapp_number: "923216393999"   # wa.me format: country code, no plus, no spaces
+  whatsapp_type: "[CONFIRM] WhatsApp Business app on this number?"
+  email: "[PENDING] clinic email for policies and Google (the clinic Google account from cloud-setup.md §1)"
+
+offer:
+  first_consultation_free: true
+  free_scope: "[CONFIRM] free = first WhatsApp consultation, first clinic visit, or both?"
+  fee_after_first: "[PENDING] consultation fee after the first one"
+
+# Display order is fixed: public specialties first, then private ones.
+# code = internal WhatsApp ref / analytics code. Private conditions share "PRV" so no code reveals them.
+# ads_allowed = may this be the subject of a Meta ad (see compliance.md)?
+specialties:
+  - { key: joints,        code: JNT, group: public,  ads_allowed: true,  name_ur: "جوڑوں کے درد", name_en: "Joint pain" }
+  - { key: stomach_liver, code: SLV, group: public,  ads_allowed: true,  name_ur: "معدہ و جگر", name_en: "Stomach & liver" }
+  - { key: spine,         code: SPN, group: public,  ads_allowed: true,  name_ur: "مہروں کے درد", name_en: "Neck & back (spine) pain" }
+  - { key: paralysis,     code: PRL, group: public,  ads_allowed: false, name_ur: "فالج و لقوہ", name_en: "Paralysis & facial palsy" }
+  - { key: hepatitis,     code: HEP, group: public,  ads_allowed: false, name_ur: "ہیپاٹائٹس", name_en: "Hepatitis" }
+  - { key: diabetes,      code: SGR, group: public,  ads_allowed: false, name_ur: "شوگر", name_en: "Diabetes (sugar)" }
+  - { key: depression,    code: DEP, group: public,  ads_allowed: false, name_ur: "ڈپریشن", name_en: "Depression" }
+  - { key: mens_health,   code: PRV, group: private, ads_allowed: false, name_ur: "مردانہ امراض", name_en: "Men's health" }
+  - { key: womens_health, code: PRV, group: private, ads_allowed: false, name_ur: "زنانہ امراض", name_en: "Women's health" }
+  - { key: childlessness, code: PRV, group: private, ads_allowed: false, name_ur: "بے اولادی", name_en: "Childlessness" }
+
+# Products are created in Shopify admin (as DRAFT until compliance sign-off).
+# Handles stay stable even if a brand name changes.
+products:
+  - handle: herbal-joint-oil
+    name_ur: "شفاء المفاصل"   # final name on the 2026-11-14 label design [PROOF-READ]
+    name_en: "Shifa-ul-Mafasil"   # always a name, never translated as "joint cure" (compliance.md §5)
+    descriptor_ur: "جوڑوں کی مالش کا ہربل روغن"   # [PROOF-READ]
+    descriptor_en: "Herbal joint massage oil"
+    label_design: "docs/reference/ref-oil-label-shifa-ul-mafasil.jpg"   # front label, 2026-11-14
+    label_benefits_ur: ["اکڑن میں آرام", "درد سے نجات", "پٹھوں کے کھچاؤ سے راحت"]   # as printed on the design. «درد سے نجات» → «درد میں آرام» recommended before printing (compliance.md §5)
+    form: "oil, dropper bottle, external use"
+    size: "100 ml"
+    label_claim: "100% Natural Ingredients"   # [CONFIRM] literally true: no synthetic additives or preservatives?
+    ingredients: "[PENDING]"
+    directions: "[PENDING]"
+    price_pkr: "[PENDING]"
+    tags: ["external-use"]
+    regulatory_status: "[PENDING] DRAP enlistment or licence number for this product, if any"
+  - handle: stomach-liver-herbal
+    name_ur: "معدہ و جگر"   # name printed on the approved pouch
+    name_en: "[CONFIRM] Stomach & Liver herbal formula"
+    form: "[PENDING] tablets or powder, in a printed pouch"
+    size: "[PENDING]"
+    label_claim: "100% Natural Ingredients"   # [CONFIRM]
+    ingredients: "[PENDING]"
+    directions: "[PENDING]"
+    price_pkr: "[PENDING]"
+    tags: []
+    regulatory_status: "[PENDING]"
+  - handle: joint-herbal-tablets
+    name_ur: "[PENDING] product name"
+    name_en: "[PENDING] product name"
+    form: "small round khaki-olive compressed herbal tablets"
+    size: "[PENDING] tablet count"
+    ingredients: "[PENDING]"
+    directions: "[PENDING]"
+    price_pkr: "[PENDING]"
+    tags: []
+    regulatory_status: "[PENDING]"
+
+commerce:
+  currency: "PKR"
+  payment_methods: ["Cash on Delivery"]   # [CONFIRM] add bank transfer / JazzCash / Easypaisa?
+  delivery_area: "[PENDING] Lahore only or nationwide"
+  delivery_fee_pkr: "[PENDING]"
+  free_delivery_threshold_pkr: "[PENDING]"
+  delivery_time: "[PENDING]"
+  courier: "[PENDING]"
+  cod_confirmation: "Every COD order is confirmed on WhatsApp or by phone before dispatch."
+  returns_policy: "[PENDING] e.g. unopened and sealed only, or damaged on arrival"
+  cart_enabled: false   # flips to true only after compliance.md §5 is signed off
+
+links:
+  domain: "[PENDING] e.g. zahradaralshifa.com, bought in Shopify or at Hostinger (cloud-setup.md §6)"
+  shopify_store: "[PENDING] xxxx.myshopify.com (Shopify Basic plan, owned by the clinic's Google account)"
+  google_business_profile: "[PENDING]"
+  facebook: "[PENDING]"
+  instagram: "[PENDING]"
+  tiktok: "[PENDING]"
+  youtube: "[PENDING]"
+
+safety:
+  emergency_number: "1122"   # Rescue 1122, Punjab emergency service
+  # Removed 2026-11-14 at Ahmad's request: the Umang mental-health helpline number (taken from a public list of
+  # Pakistani helplines, never confirmed on Umang's own site). Safety notices now point to Rescue 1122 and the nearest hospital.
+  helpline_name_ur: "[PENDING] only if Major Sahab later chooses a verified mental-health helpline"
+  helpline_name_en: "[PENDING]"
+  helpline_number: "[PENDING]"
+
+tracking:
+  meta_pixel_id: "[PENDING]"
+  ga4_measurement_id: "[PENDING]"
+
+media_rules:
+  logo_width_mobile_hero: "clamp(96px, 28vw, 132px) = 25–30% of a phone screen"
+  logo_width_compact_header: "56px"
+  logo_width_desktop_header: "120px"

@@ -1,0 +1,72 @@
+# docs/tech/v0-scope.yml — what the v0 (go-live) site shows: the homepage in Urdu and English.
+# Used by:  npm run qa:launch:v0  (qa-static --launch --scope)  and  npm run qa:proofread  (proof-read sheet).
+# A line of facts.yml / copy.yml is in scope when its key path starts with an `include` entry and with no `exclude` entry.
+# Lines whose VALUE starts with [PENDING] or [CONFIRM] render nothing, so they never block v0.
+# Claude keeps this file true to what v0 really renders (e.g. remove hero.image_alt from `exclude` when a real
+# hero photo of Major Sahab is used, add product keys when products are published).
+
+facts:
+  include:
+    - brand.name_ur
+    - brand.name_en
+    - practitioner
+    - clinic.address
+    - hours
+    - contact
+    - offer
+    - specialties
+    - safety
+  exclude:
+    - practitioner.internal_name      # never shown
+    - practitioner.history_internal   # never shown
+    - practitioner.credential_line_ur # ads and print only
+    - practitioner.credential_line_en
+    - practitioner.services
+    - practitioner.phd_status
+    - practitioner.title_dr_allowed
+  # Facts Major Sahab checks one by one on the proof-read sheet, in this order.
+  show_on_sheet:
+    - practitioner.display_ur
+    - practitioner.display_en
+    - practitioner.role_ur
+    - practitioner.experience_ur
+    - practitioner.rank_ur
+    - practitioner.qualification_ur
+    - practitioner.institute_ur
+    - practitioner.council_ur
+    - practitioner.council_reg_no
+    - practitioner.council_reg_valid_until
+    - clinic.address.full_ur
+    - clinic.address.landmark_ur
+    - clinic.address.full_en
+    - clinic.address.landmark_en
+    - hours.display_ur
+    - hours.display_en
+    - contact.phone_display
+    - specialties
+    - safety.emergency_number
+    - safety.helpline_number
+
+copy:
+  include:
+    - meta
+    - a11y
+    - lang_switch
+    - nav
+    - hero
+    - about
+    - treatments
+    - medicines
+    - contact
+    - sticky
+    - footer
+    - whatsapp
+  exclude:
+    - hero.headline_b            # A/B variant, off at launch (hero_variant = a)
+    - hero.image_alt             # only with a real photo; the placeholder uses hero.placeholder_alt
+    - about.quote                # empty until Major Sahab gives his own words
+    - about.testimonials_heading # show_testimonials is off
+    - about.testimonials_note
+    - about.cred_phd             # PhD hidden until verified
+    - about.certificate_link     # certificate_public is false (Major Sahab's decision)
+    - whatsapp.product           # no products on v0

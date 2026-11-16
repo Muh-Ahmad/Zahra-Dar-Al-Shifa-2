@@ -1,0 +1,19 @@
+# Dependencies and tool state
+node_modules/
+.shopify/
+
+# Secrets: never commit
+.env
+.env.*
+
+# QA output that is regenerated every run (summary.md and screenshots ARE committed)
+qa/.review-theme.json
+qa/lighthouse/latest/*.json
+qa/review.html
+qa/screenshots/tmp/
+
+# OS and logs
+*.log
+.DS_Store
+Thumbs.db
+qa/proofread.html
